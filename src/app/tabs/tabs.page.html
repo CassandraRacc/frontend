@@ -1,20 +1,36 @@
 <ion-tabs>
 
+  <ion-header>
+    <ion-toolbar>
+      <h1 class="logo" >Reel News</h1>
+    </ion-toolbar>
+  </ion-header>
+
+<!-- RouterLinkActive not working -->
+
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="tab1">
-      <ion-icon aria-hidden="true" name="triangle"></ion-icon>
-      <ion-label>Tab 1</ion-label>
+    <ion-tab-button RouterLinkActive="active" class="home" tab="tab1"  >
+      <ion-icon color="primary" name="earth-outline"></ion-icon>
+      <ion-label color="primary" >Home</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="tab2">
-      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
-      <ion-label>Tab 2</ion-label>
+    <ion-tab-button RouterLinkActive="active" tab="tab2">
+      <ion-icon color="secondary" name="newspaper-outline"></ion-icon>
+      <ion-label color="secondary">Articles</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="tab3">
-      <ion-icon aria-hidden="true" name="square"></ion-icon>
-      <ion-label>Tab 3</ion-label>
+    <ion-tab-button RouterLinkActive="active" tab="tab3">
+      <ion-icon color="tertiary" name="dice-outline"></ion-icon>
+      <ion-label color="tertiary">Good/Bad</ion-label>
     </ion-tab-button>
+
+
+    <ion-tab-button RouterLinkActive="active" tab="tab4">
+      <ion-icon color="success" name="sparkles-outline"></ion-icon>
+      <ion-label color="success">Fun Facts</ion-label>
+    </ion-tab-button>
+
+
   </ion-tab-bar>
 
 </ion-tabs>
