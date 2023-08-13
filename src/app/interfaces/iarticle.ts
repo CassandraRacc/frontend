@@ -8,4 +8,5 @@ export interface Iarticle {
     scope:string;
     good_or_bad:string;
     date_posted:Date;
+    desc:string;
 }

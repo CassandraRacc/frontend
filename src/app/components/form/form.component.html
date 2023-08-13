@@ -1,16 +1,41 @@
+<form [formGroup]="subscribeForm">
+  <div class="mb-3">
+    <label for="first_name" class="first_name">First Name</label>
+    <input type="text" class="form-control" formConrolName="first_name">
+  </div>
 
-<ion-item>
-  <ion-label>
-    <h1>Subscribe</h1>
-    <p>Get a weekly recap sent right to your inbox</p>
-  </ion-label>
-</ion-item>
-<ion-item>
-  <ion-input label="First Name" labelPlacement="floating" placeholder="Enter First Name"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-input label="Last Name" labelPlacement="floating" placeholder="Enter Last Name"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-input label="Email" type="email" labelPlacement="floating" placeholder="@gmail.com"></ion-input>
-</ion-item>
+  <div class="mb-3">
+    <label for="last_name" class="last_name">Last Name</label>
+    <input type="text" class="form-control" formConrolName="last_name">
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="email">Email</label>
+    <input type="email" class="form-control" formConrolName="email" placeholder="@gmail.com">
+  </div>
+
+  <button class="btn btn-primary" type="button" (click)="onSubmit" [disabled]="subscribeForm.invalid">Subscribe</button>
+
+</form>
+
+
+
+
+<!-- <ion-form>
+  <ion-item>
+    <ion-label>
+      <h1>Subscribe</h1>
+      <p>Get a weekly recap sent right to your inbox</p>
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-input label="First Name" labelPlacement="floating" placeholder="Enter First Name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label="Last Name" labelPlacement="floating" placeholder="Enter Last Name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label="Email" type="email" labelPlacement="floating" placeholder="@gmail.com"></ion-input>
+  </ion-item>
+  <ion-button fill="outline" expand="block">Block</ion-button>
+</ion-form> -->

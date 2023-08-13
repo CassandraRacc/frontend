@@ -6,14 +6,16 @@ import { Tab2Page } from './tab2.page';
 
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
+import { ArticleComponent } from '../components/article/article.component';
+
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    Tab2PageRoutingModule
+    Tab2PageRoutingModule,
   ],
-  declarations: [Tab2Page]
+  declarations: [Tab2Page, ArticleComponent]
 })
 export class Tab2PageModule {}
