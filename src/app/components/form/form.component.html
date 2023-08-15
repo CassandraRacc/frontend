@@ -1,27 +1,44 @@
-<form [formGroup]="subscribeForm">
-  <div class="mb-3">
-    <label for="first_name" class="first_name">First Name</label>
-    <input type="text" class="form-control" formConrolName="first_name">
+<!-- <div class="row " >   
+  <div class="col-xs-3 offset-xs-3">
+    <form class="form rounded-pill" [formGroup]="subscribeForm">
+      <h1>Subscribe</h1>
+      <hr>
+      <div class="mb-3">
+        <label class="form-label">First Name</label>
+        <input type="text" class="form-control" formControlName="first_name">
+
+        <div *ngIf="first_name.touched && first_name.errors?.['required']" class="alert alert-danger mt-2" role="alert">
+          The First Name Field is required
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="form-label" class="last_name">Last Name</label>
+        <input type="text" class="form-control" formControlName="last_name">
+
+        <div *ngIf="last_name.touched && last_name.errors?.['required']" class="alert alert-danger mt-2" role="alert">
+          The Last Name Field is required
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" class="email">Email</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="@gmail.com">
+
+        <div *ngIf="email.touched && email.errors?.['required']" class="alert alert-danger mt-2" role="alert">
+          The Email Field is required
+        </div>
+      </div>
+
+      <button class="btn btn-primary" type="button" (click)="onSubmit()" [disabled]="subscribeForm.invalid">Subscribe</button>
+
+    </form>
+
   </div>
 
-  <div class="mb-3">
-    <label for="last_name" class="last_name">Last Name</label>
-    <input type="text" class="form-control" formConrolName="last_name">
-  </div>
+</div> -->
 
-  <div class="mb-3">
-    <label for="email" class="email">Email</label>
-    <input type="email" class="form-control" formConrolName="email" placeholder="@gmail.com">
-  </div>
-
-  <button class="btn btn-primary" type="button" (click)="onSubmit" [disabled]="subscribeForm.invalid">Subscribe</button>
-
-</form>
-
-
-
-
-<!-- <ion-form>
+<!-- <ion-form> -->
   <ion-item>
     <ion-label>
       <h1>Subscribe</h1>
@@ -38,4 +55,4 @@
     <ion-input label="Email" type="email" labelPlacement="floating" placeholder="@gmail.com"></ion-input>
   </ion-item>
   <ion-button fill="outline" expand="block">Block</ion-button>
-</ion-form> -->
+<!-- </ion-form>  -->

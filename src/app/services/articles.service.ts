@@ -10,11 +10,11 @@ export class ArticlesService {
   constructor(private http: HttpClient) { }
 
   getArticles(){
-    return this.http.get<Iarticle[]>('http://localhost:3000/articles');
+    return this.http.get<Iarticle[]>('http://localhost:3000/article');
   }
 
-  getArticle(articleCategory:string){
-    return this.http.get<Iarticle[]>(`http://localhost:3000/articles/${articleCategory}`);
+  getCategory(articleCategory:string){
+    return this.http.get<Iarticle[]>(`http://localhost:3000/article/${articleCategory}`);
   }
 
 

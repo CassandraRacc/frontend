@@ -10,31 +10,21 @@ import { Iarticle } from '../interfaces/iarticle';
 })
 export class Tab2Page {
  
+  articles!:Iarticle[];
 
-articles!:Iarticle[];
-// category!:Iarticle[];
+  constructor(private articleservice:ArticlesService) {
 
-  constructor(private articleService: ArticlesService){
-
-    articleService.getArticles().subscribe({
-      next: (results)  => {
-        this.articles = results;
-      },
-      error: (err) => {
-        console.log(err);
+    articleservice.getArticles().subscribe({
+      next: (results) => {
+        this.articles = results
+        console.log(this.articles)
+      }, 
+      error:(err) => {
+        console.log('an Error occured')
       }
     });
-
-    // articleService.getCategory().subscribe({
-    //   next: (results)  => {
-    //     this.category = results;
-    //   },
-    //   error: (err) => {
-    //     console.log(err);
-    //   }
-    // });
-
   }
+
 
 
 
