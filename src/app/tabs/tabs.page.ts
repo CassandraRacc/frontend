@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { ArticlesService } from '../services/articles.service';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +9,19 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  articles = [];
+
+  constructor(private http: HttpClient, private articleService:ArticlesService) {
+    this.loadArticles();
+  }
+
+  loadArticles() {
+    this.http
+    .get('http://localhost:3000/article')
+    .subscribe((res: any) => {
+      this.articles = res.results;
+      console.log(this.articles);
+    });
+  }
 
 }

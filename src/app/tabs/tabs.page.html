@@ -3,10 +3,21 @@
   <ion-header>
     <ion-toolbar>
       <h1 class="logo" >Reel News</h1>
+
+
+      <ion-content>
+        <app-searchable-select></app-searchable-select>
+      </ion-content>
+
+
+
+      <ion-searchbar show-clear-button="focus" value="Show on Focus" animated="true" placeholder="Animated"></ion-searchbar>
     </ion-toolbar>
+
   </ion-header>
 
 <!-- RouterLinkActive not working -->
+
 
   <ion-tab-bar slot="bottom">
     <ion-tab-button RouterLinkActive="active" class="home" tab="tab1"  >

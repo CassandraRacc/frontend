@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Iarticle } from '../interfaces/iarticle';
+import { ArticlesService } from '../services/articles.service';
 
 @Component({
   selector: 'app-tab3',
@@ -7,6 +9,19 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  articles!:Iarticle[];
+
+  constructor(private articleservice:ArticlesService) {
+
+    articleservice.getArticles().subscribe({
+      next: (results) => {
+        this.articles = results
+        console.log(this.articles)
+      }, 
+      error:(err) => {
+        console.log('an Error occured')
+      }
+    });
+  }
 
 }

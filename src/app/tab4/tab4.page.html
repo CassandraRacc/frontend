@@ -1,6 +1,6 @@
 <ion-content color="success" [fullscreen]="true">
-
-    <div class="d-flex justify-content-start">Welcome</div>
+<!-- 
+    <div  class="d-flex justify-content-start"></div>
 
     <div class="d-flex justify-content-center">To</div>
 
@@ -16,7 +16,18 @@
 
     <div class="d-flex justify-content-center">Around</div>
 
-    <div class="d-flex justify-content-end">Awhile</div>
+    <div class="d-flex justify-content-end">Awhile</div> -->
+
+    <ion-card *ngFor="let fact of facts">
+       
+      
+        <ion-card-title>{{fact.fun_fact}}</ion-card-title>
+      
+        <a href="{{fact.article_id}}">
+            <ion-button  fill="clear">{{fact.article_id}}</ion-button>
+        </a>
+
+      </ion-card>
   
     
 
