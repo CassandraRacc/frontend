@@ -23,11 +23,12 @@
   </div>
 
   <hr>
-  <ion-grid>
+  <ion-grid [fixed]="true">
     <ion-row>
 
-      <ion-card class="col-xs-3" *ngFor="let article of articles">
-        <img src="{{article.image}}" />
+      <ion-card class="article col-xs-2"  *ngFor="let article of articles">
+        <img [src]="article.image" width="150px" height="100px">
+        <a [href]="article.url" class="stretched-link"></a>
         <ion-card-header>
           <ion-card-title>{{article.name}}</ion-card-title>
           <ion-card-subtitle>{{article.author}}</ion-card-subtitle>
@@ -35,6 +36,7 @@
 
         <ion-card-content>
           {{article.desc}}
+
         </ion-card-content>
       </ion-card>
 
@@ -44,6 +46,6 @@
   <hr>
   <hr>
 
-  <app-form></app-form>
+  <app-form ></app-form>
 
 </ion-content>

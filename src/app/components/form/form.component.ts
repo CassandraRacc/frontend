@@ -16,7 +16,7 @@ export class FormComponent implements OnInit {
     this.subscribeForm = fb.group({
       first_name:['', [Validators.required]],
       last_name:['', [Validators.required]],
-      email:['', [Validators.required]],
+      email:['', [Validators.required]]
     });
 
    }

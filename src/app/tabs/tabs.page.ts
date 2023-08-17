@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { ArticlesService } from '../services/articles.service';
+// import { ArticlesService } from '../services/articles.service';
 
 @Component({
   selector: 'app-tabs',
@@ -9,19 +9,23 @@ import { ArticlesService } from '../services/articles.service';
 })
 export class TabsPage {
 
-  articles = [];
+  // articles = [];
 
-  constructor(private http: HttpClient, private articleService:ArticlesService) {
-    this.loadArticles();
-  }
+  // constructor(private http: HttpClient, private articleService:ArticlesService) {
+  //   this.loadArticles();
+  // }
 
-  loadArticles() {
-    this.http
-    .get('http://localhost:3000/article')
-    .subscribe((res: any) => {
-      this.articles = res.results;
-      console.log(this.articles);
-    });
-  }
+  // loadArticles() {
+  //   this.http
+  //   .get('http://localhost:3000/article')
+  //   .subscribe((res: any) => {
+  //     this.articles = res.results;
+  //     console.log(this.articles);
+  //   });
+  // }
+
+  // selectChanged(event) {
+  //   console.log('CHANGED: ', event);
+  // }
 
 }
