@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Isubscriber } from '../interfaces/isubscriber';
+import { Isubscribe } from '../interfaces/isubscribe';
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class SubscribeService {
   constructor(private http: HttpClient) { 
   }
 
-  newSubscribe(formData: any){
-    return this.http.post<Isubscriber>('http:localhost:3000/subscribe', formData);
+  newSubscribe(formData:any){
+    return this.http.post<Isubscribe>('http://localhost:3000/subscribes', formData);
   }
 }

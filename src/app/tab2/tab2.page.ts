@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ArticlesService } from '../services/articles.service';
 import { Iarticle } from '../interfaces/iarticle';
+import { CategoryService } from '../services/category.service';
 
 
 @Component({
@@ -11,8 +12,10 @@ import { Iarticle } from '../interfaces/iarticle';
 export class Tab2Page {
  
   articles!:Iarticle[];
+  category!:Iarticle[];
+  
 
-  constructor(private articleservice:ArticlesService) {
+  constructor(private articleservice:ArticlesService, private categoryservice:CategoryService) {
 
     articleservice.getArticles().subscribe({
       next: (results) => {
@@ -23,7 +26,21 @@ export class Tab2Page {
         console.log('an Error occured')
       }
     });
-  }
+
+
+
+
+  //   categoryservice.getCategory().subscribe({
+  //     next: (results) => {
+  //       this.category = results
+  //       console.log(this.category)
+  //     }, 
+  //     error:(err) => {
+  //       console.log('an Error occured')
+  //     }
+  //   });
+
+   }
 
 
 

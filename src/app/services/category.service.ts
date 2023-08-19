@@ -5,19 +5,11 @@ import { Iarticle } from '../interfaces/iarticle';
 @Injectable({
   providedIn: 'root'
 })
-export class ArticlesService {
+export class CategoryService {
 
   constructor(private http: HttpClient) { }
 
-  getArticles(){
-    return this.http.get<Iarticle[]>('http://localhost:3000/article');
+  getCategory(category:string) {
+    return this.http.get<Iarticle[]>('http://localhost:3000/filter${category}');
   }
-
-  getCategory(){
-    return this.http.get<Iarticle[]>(`http://localhost:3000/filter`);
-  }
-
-
-
-
 }
