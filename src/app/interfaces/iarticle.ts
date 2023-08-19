@@ -2,10 +2,9 @@ export interface Iarticle {
     id:number;
     name:string;
     url:string;
-    category:string;
+    category_id:number;
     author:string;
     image:string;
-    scope:string;
     good_or_bad:string;
     date_posted:Date;
     desc:string;

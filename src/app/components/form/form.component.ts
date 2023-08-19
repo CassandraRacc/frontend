@@ -26,8 +26,8 @@ export class FormComponent implements OnInit {
     console.log(formData)
 
     this.subscribeService.newSubscribe(formData).subscribe({
-      next: (results) => {
-        alert(`${results.first_name}has successfully Subscribed`);
+      next: (result) => {
+        alert(`${result.first_name}has successfully Subscribed`);
         this.subscribeForm.reset()
       },
       error: (err) => {

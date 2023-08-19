@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ArticlesService } from '../services/articles.service';
 import { Iarticle } from '../interfaces/iarticle';
 import { CategoryService } from '../services/category.service';
+import { Icategory } from '../interfaces/icategory';
+
 
 
 @Component({
@@ -10,19 +12,22 @@ import { CategoryService } from '../services/category.service';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
- 
-  articles!:Iarticle[];
-  category!:Iarticle[];
-  
 
-  constructor(private articleservice:ArticlesService, private categoryservice:CategoryService) {
+  articles!: Iarticle[];
+  categories!: Icategory[];
+
+  catArt: { [key: string]: Iarticle[] } = {};
+
+
+
+  constructor(private articleservice: ArticlesService, private categoryservice: CategoryService) {
 
     articleservice.getArticles().subscribe({
       next: (results) => {
         this.articles = results
         console.log(this.articles)
-      }, 
-      error:(err) => {
+      },
+      error: (err) => {
         console.log('an Error occured')
       }
     });
@@ -30,19 +35,31 @@ export class Tab2Page {
 
 
 
-  //   categoryservice.getCategory().subscribe({
-  //     next: (results) => {
-  //       this.category = results
-  //       console.log(this.category)
-  //     }, 
-  //     error:(err) => {
-  //       console.log('an Error occured')
-  //     }
-  //   });
+    categoryservice.getCategory().subscribe({
+      next: (results) => {
+        this.categories = results
+        console.log(this.categories)
+      },
+      error: (err) => {
+        console.log('an Error occured');
+      }
+    });
 
-   }
+  }
 
 
+
+  groupArticles() {
+    this.catArt = {};
+
+    for (const article of this.articles) {
+      const categoryId = article.category_id;
+      if (this.catArt[categoryId]) {
+        this.catArt[categoryId] = [];
+      }
+      this.catArt[categoryId].push(article);
+    }
+  }
 
 
 }
