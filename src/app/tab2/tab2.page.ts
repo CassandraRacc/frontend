@@ -3,7 +3,7 @@ import { ArticlesService } from '../services/articles.service';
 import { Iarticle } from '../interfaces/iarticle';
 import { CategoryService } from '../services/category.service';
 import { Icategory } from '../interfaces/icategory';
-import { Icategorygroup } from '../interfaces/icategorygroup';
+
 
 
 
@@ -16,7 +16,7 @@ export class Tab2Page {
 
   articles!: Iarticle[];
   categories!: Icategory[];
-  groups: Icategorygroup[] = [];
+  
 
 
 

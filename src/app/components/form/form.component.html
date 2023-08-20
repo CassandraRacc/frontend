@@ -38,7 +38,7 @@
 
 </div> -->
 
- <ion-content [formGroup]="subscribeForm">  
+<ion-content class="form" [formGroup]="subscribeForm">
   <ion-item>
     <ion-label>
       <h1>Subscribe</h1>
@@ -49,8 +49,9 @@
 
   <ion-item>
 
-    <ion-input class="form-label" label="First Name" labelPlacement="floating" placeholder="Enter First Name" type="text" class="form-control" formControlName="first_name"></ion-input>
-    
+    <ion-input class="form-label" label="First Name" labelPlacement="floating" placeholder="Enter First Name"
+      type="text" class="form-control" formControlName="first_name"></ion-input>
+
     <div *ngIf="first_name.touched && first_name.errors?.['required']" class="alert alert-danger mt-2" role="alert">
       The First Name Field is required
     </div>
@@ -58,7 +59,8 @@
   </ion-item>
   <ion-item>
 
-    <ion-input class="form-label" label="Last Name" labelPlacement="floating" placeholder="Enter Last Name" type="text" class="form-control" formControlName="last_name"></ion-input>
+    <ion-input class="form-label" label="Last Name" labelPlacement="floating" placeholder="Enter Last Name" type="text"
+      class="form-control" formControlName="last_name"></ion-input>
 
     <div *ngIf="last_name.touched && last_name.errors?.['required']" class="alert alert-danger mt-2" role="alert">
       The Last Name Field is required
@@ -67,7 +69,8 @@
   </ion-item>
   <ion-item>
 
-    <ion-input class="bottom" label="Email" type="email" labelPlacement="floating" placeholder="@gmail.com" type="email" class="form-control" formControlName="email"></ion-input>
+    <ion-input class="bottom" label="Email" type="email" labelPlacement="floating" placeholder="@gmail.com" type="email"
+      class="form-control" formControlName="email"></ion-input>
 
     <div *ngIf="email.touched && email.errors?.['required']" class="alert alert-danger mt-2" role="alert">
       The Email Field is required
@@ -76,5 +79,5 @@
   </ion-item>
 
   <ion-button class="btn" (click)="onSubmit()" [disabled]="subscribeForm.invalid">Subscribe</ion-button>
-  
-</ion-content>  
+
+</ion-content>

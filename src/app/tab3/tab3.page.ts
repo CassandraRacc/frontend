@@ -39,22 +39,8 @@ export class Tab3Page {
   }
 
 
-  //USE THIS (edit) for the outline it method
-  //Get task Id from URL
-  //   let taskId = route.snapshot.paramMap.get('task_id');
-
-
-  //   //edit mode
-  //   if (taskId !== null) {
-  //     this.isEdit = true;
-  //     this.editId = parseInt(taskId);
-
-  //     //get task from DB and pre-populate form with the data
-  //     taskService.getTask(this.editId).subscribe({
-  //       next: (result) => {
-  //         this.taskForm.patchValue(result); //populate form with task data
-  //       }
-  //     })
-  //   }
+  outlineIt() {
+    
+  }
 
 }

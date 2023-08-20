@@ -13,9 +13,6 @@ export class ArticlesService {
     return this.http.get<Iarticle[]>('http://localhost:3000/article');
   }
 
-  getCategory(){
-    return this.http.get<Iarticle[]>(`http://localhost:3000/filter`);
-  }
 
 
 

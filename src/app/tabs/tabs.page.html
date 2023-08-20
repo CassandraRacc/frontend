@@ -3,28 +3,12 @@
   <ion-header>
     <ion-toolbar>
       <h1 class="logo">Reel News</h1>
-<!-- 
-      <ion-content>
-        <ion-item (click)="select.open()">
-          <ion-label>Select Article</ion-label>
-          <app-searchable-select 
-          title="Select Article" 
-          [data]="articles" 
-          itemTextField="name"
-            #select
-            (selectedChanged)="selectChanged($event)"></app-searchable-select>
-
-        </ion-item>
-      </ion-content> -->
-      
-      <ion-searchbar show-clear-button="focus" value="Show on Focus" animated="true" placeholder="Animated"></ion-searchbar> 
-
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-searchbar></ion-searchbar>
     </ion-toolbar>
 
   </ion-header>
-
-
-  <!-- RouterLinkActive not working -->
 
 
   <ion-tab-bar slot="bottom">

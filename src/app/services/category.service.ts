@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Iarticle } from '../interfaces/iarticle';
 import { Icategory } from '../interfaces/icategory';
+import { Ivibe } from '../interfaces/ivibe';
 
 @Injectable({
   providedIn: 'root'
@@ -13,4 +13,5 @@ export class CategoryService {
   getCategory() {
     return this.http.get<Icategory[]>('http://localhost:3000/categories');
   }
+
 }
