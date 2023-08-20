@@ -1,16 +1,18 @@
 <ion-content color="secondary" [fullscreen]="true">
 
   <ion-grid>
-    <div *displayArticles="categories">
+    <div *ngFor="let category of categories">
       <ion-row >
         <ion-label>
-          <h1 class="category">{{ implicit.name }}</h1>
+          <h1 class="category">{{ category.title }}</h1>
         </ion-label>
+      </ion-row>
+      <ion-row>
 
-        <ion-card class="article col-xs-2" [button]="true" *ngFor="let article of implicit.articles">
-          <!-- <img [src]="article.image" width="150px" height="100px"> -->
+        <ion-card class="article col-xs-2" [button]="true" *ngFor="let article of category.articles">
+          <img [src]="article.image" width="150px" height="100px"> 
           <ion-card-header>
-            <ion-card-title>{{ article.title }}</ion-card-title>
+            <ion-card-title>{{  article.author }}</ion-card-title>
             <ion-card-subtitle></ion-card-subtitle>
           </ion-card-header>
           <ion-card-content>

@@ -1,4 +1,4 @@
-import { Component, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { ArticlesService } from '../services/articles.service';
 import { Iarticle } from '../interfaces/iarticle';
 import { CategoryService } from '../services/category.service';
@@ -18,7 +18,7 @@ export class Tab2Page {
   categories!: Icategory[];
   groups: Icategorygroup[] = [];
 
-  // catArt: { [key: string]: Iarticle[] } = { };
+
 
 
 
@@ -46,8 +46,6 @@ export class Tab2Page {
     });
 
   }
-
- 
 
 
   
