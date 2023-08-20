@@ -1,17 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Ifact } from '../interfaces/ifact';
+import { Ivibe } from '../interfaces/ivibe';
 
 @Injectable({
   providedIn: 'root'
 })
-export class FunFactService {
+export class FeelService {
 
   constructor(private http:HttpClient) { }
 
-
-  getFacts(){
-    return this.http.get<Ifact[]>('http://localhost:3000/funfacts');
+  getVibe(){
+    return this.http.get<Ivibe[]>('http://localhost:3000/vibes');
   }
-
 }

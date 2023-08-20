@@ -1,36 +1,27 @@
 <ion-content color="secondary" [fullscreen]="true">
 
   <ion-grid>
-
-    <div class="feel-good">
-      <ion-row>
-        <ion-item>
-          <ion-label>
-            <h1 class="category"></h1>
-          </ion-label>
-        </ion-item>
-      </ion-row>
-    
-      <ion-row *ngFor="let category of categories">
+    <div *displayArticles="categories">
+      <ion-row >
         <ion-label>
-          <h1 class="category">{{ category.title }}</h1>
+          <h1 class="category">{{ implicit.name }}</h1>
         </ion-label>
-    
-        <ion-card class="article col-xs-2" [button]="true" *ngFor="let article of catArticles[category.1]">
-          <img [src]="article.image" width="150px" height="100px">
+
+        <ion-card class="article col-xs-2" [button]="true" *ngFor="let article of implicit.articles">
+          <!-- <img [src]="article.image" width="150px" height="100px"> -->
           <ion-card-header>
-            <ion-card-title>{{ article.name }}</ion-card-title>
-            <ion-card-subtitle>{{ article.author }}</ion-card-subtitle>
+            <ion-card-title>{{ article.title }}</ion-card-title>
+            <ion-card-subtitle></ion-card-subtitle>
           </ion-card-header>
           <ion-card-content>
-            {{ article.desc }}
+            
           </ion-card-content>
         </ion-card>
       </ion-row>
     </div>
-    
 
-    <div class="entertainment">
+
+    <!-- <div class="entertainment">
       <hr>
       <ion-item>
         <ion-label>
@@ -40,7 +31,7 @@
 
       <ion-row>
 
-        <ion-card class="article col-xs-2" [button]="true"  *ngFor="let article of articles">
+        <ion-card class="article col-xs-2" [button]="true" *ngFor="let article of articles">
           <img [src]="article.image" width="150px" height="100px">
           <ion-card-header>
             <ion-card-title>{{article.name}}</ion-card-title>
@@ -65,9 +56,9 @@
 
       <ion-row>
 
-        <ion-card class="article col-xs-2" [button]="true"  *ngFor="let article of articles">
-          <img [src]="article.image" width="150px" height="100px">        
-            <ion-card-header>
+        <ion-card class="article col-xs-2" [button]="true" *ngFor="let article of articles">
+          <img [src]="article.image" width="150px" height="100px">
+          <ion-card-header>
             <ion-card-title>{{article.name}}</ion-card-title>
             <ion-card-subtitle>{{article.author}}</ion-card-subtitle>
           </ion-card-header>
@@ -89,9 +80,9 @@
 
       <ion-row>
 
-        <ion-card class="article col-xs-2" [button]="true"  *ngFor="let article of articles">
-          <img [src]="article.image" width="150px" height="100px">         
-           <ion-card-header>
+        <ion-card class="article col-xs-2" [button]="true" *ngFor="let article of articles">
+          <img [src]="article.image" width="150px" height="100px">
+          <ion-card-header>
             <ion-card-title>{{article.name}}</ion-card-title>
             <ion-card-subtitle>{{article.author}}</ion-card-subtitle>
           </ion-card-header>
@@ -114,9 +105,9 @@
 
       <ion-row>
 
-        <ion-card class="article col-xs-2" [button]="true"  *ngFor="let article of articles">
-          <img [src]="article.image" width="150px" height="100px">         
-           <ion-card-header>
+        <ion-card class="article col-xs-2" [button]="true" *ngFor="let article of articles">
+          <img [src]="article.image" width="150px" height="100px">
+          <ion-card-header>
             <ion-card-title>{{article.name}}</ion-card-title>
             <ion-card-subtitle>{{article.author}}</ion-card-subtitle>
           </ion-card-header>
@@ -139,9 +130,9 @@
 
       <ion-row>
 
-        <ion-card class="article col-xs-2" [button]="true"  *ngFor="let article of articles">
-          <img [src]="article.image" width="150px" height="100px">         
-           <ion-card-header>
+        <ion-card class="article col-xs-2" [button]="true" *ngFor="let article of articles">
+          <img [src]="article.image" width="150px" height="100px">
+          <ion-card-header>
             <ion-card-title>{{article.name}}</ion-card-title>
             <ion-card-subtitle>{{article.author}}</ion-card-subtitle>
           </ion-card-header>
@@ -163,9 +154,9 @@
 
       <ion-row>
 
-        <ion-card class="article col-xs-2" [button]="true"  *ngFor="let article of articles">
-          <img [src]="article.image" width="150px" height="100px"> 
-          <a [href]="article.url" class="stretched-link"></a>         
+        <ion-card class="article col-xs-2" [button]="true" *ngFor="let article of articles">
+          <img [src]="article.image" width="150px" height="100px">
+          <a [href]="article.url" class="stretched-link"></a>
           <ion-card-header>
             <ion-card-title>{{article.name}}</ion-card-title>
             <ion-card-subtitle>{{article.author}}</ion-card-subtitle>
@@ -187,7 +178,7 @@
 
       <ion-row>
 
-        <ion-card class="article col-xs-2" [button]="true"  *ngFor="let article of articles">
+        <ion-card class="article col-xs-2" [button]="true" *ngFor="let article of articles">
           <img [src]="article.image" width="150px" height="100px">
           <ion-card-header>
             <ion-card-title>{{article.name}}</ion-card-title>
@@ -212,9 +203,9 @@
 
       <ion-row>
 
-        <ion-card class="article col-xs-2" [button]="true"  *ngFor="let article of articles">
-          <img [src]="article.image" width="150px" height="100px">         
-           <ion-card-header>
+        <ion-card class="article col-xs-2" [button]="true" *ngFor="let article of articles">
+          <img [src]="article.image" width="150px" height="100px">
+          <ion-card-header>
             <ion-card-title>{{article.name}}</ion-card-title>
             <ion-card-subtitle>{{article.author}}</ion-card-subtitle>
           </ion-card-header>
@@ -224,7 +215,7 @@
           </ion-card-content>
         </ion-card>
       </ion-row>
-    </div>
+    </div> -->
 
   </ion-grid>
 

@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 import { ArticlesService } from '../services/articles.service';
 import { Iarticle } from '../interfaces/iarticle';
 import { CategoryService } from '../services/category.service';
 import { Icategory } from '../interfaces/icategory';
+import { Icategorygroup } from '../interfaces/icategorygroup';
 
 
 
@@ -15,12 +16,13 @@ export class Tab2Page {
 
   articles!: Iarticle[];
   categories!: Icategory[];
+  groups: Icategorygroup[] = [];
 
-  catArt: { [key: string]: Iarticle[] } = {};
+  // catArt: { [key: string]: Iarticle[] } = { };
 
 
 
-  constructor(private articleservice: ArticlesService, private categoryservice: CategoryService) {
+  constructor(private articleservice: ArticlesService, private categoryservice: CategoryService ) {
 
     articleservice.getArticles().subscribe({
       next: (results) => {
@@ -31,8 +33,6 @@ export class Tab2Page {
         console.log('an Error occured')
       }
     });
-
-
 
 
     categoryservice.getCategory().subscribe({
@@ -47,19 +47,16 @@ export class Tab2Page {
 
   }
 
+ 
 
 
-  groupArticles() {
-    this.catArt = {};
-
-    for (const article of this.articles) {
-      const categoryId = article.category_id;
-      if (this.catArt[categoryId]) {
-        this.catArt[categoryId] = [];
-      }
-      this.catArt[categoryId].push(article);
-    }
-  }
-
-
+  
 }
+
+
+  
+
+
+
+
+

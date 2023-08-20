@@ -24,4 +24,9 @@ export class Tab4Page {
     })
   }
 
-}
+  outlineIt() {
+
+  }
+
+
+ }
