@@ -18,17 +18,21 @@
 
     <div class="d-flex justify-content-end">Awhile</div> -->
 
-  <ion-card *ngFor="let fact of facts">
+  <div class="factbox" *ngFor="let fact of facts"> 
+  
+    <ion-card class="card">
+      <div>
+     
+        <ion-card-title>{{fact.fun_fact}}</ion-card-title>
+      </div>
 
+      <div *ngFor="let article of fact.articles">
+        <a [href]="article.url" class="stretched-link"></a>
+        
+      </div>
 
-    <ion-card-title>{{fact.fun_fact}}</ion-card-title>
-
-
-    <a [href]="fact.article_id" class="stretched-link">Read About It</a>
-
-
-  </ion-card>
-
+    </ion-card>
+  </div>
 
 
 

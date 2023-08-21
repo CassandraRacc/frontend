@@ -1,17 +1,18 @@
 <ion-content [fullscreen]="true" color="primary">
-  <div id="carouselExampleFade" class="carousel slide carousel-fade ">
-    <div class="carousel-inner">
+
+  <div id="carouselExampleFade"  class="carousel slide carousel-fade ">
+    <div  class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://2348.cupe.ca/files/2012/01/News.gif" class="d-block w-100" alt="...">
+        <img src="https://thecoconutmama.com/wp-content/uploads/2023/01/avocado-a-fruit-shutterstock_1872396403-scaled.webp" class="d-block w-100" alt="...">
+      </div>
+     <div class="carousel-item">
+        <img src="https://www.timeforkids.com/wp-content/uploads/2022/07/K1_230428_recycle.jpg?w=1024" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="https://a-z-animals.com/media/2022/08/shutterstock_1872396403.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://smartcdn.gprod.postmedia.digital/calgaryherald/wp-content/uploads/2023/05/0525-gorilla-1.jpg"
+        <img src="https://images.dailyhive.com/20200918091146/shutterstock_1173654874.jpg"
           class="d-block w-100" alt="...">
-      </div>
-    </div>
+      </div> 
+    </div> 
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -20,24 +21,23 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>
+  </div> 
+
 
   <hr>
   <ion-grid [fixed]="true">
     <ion-row>
 
-      <ion-card class="article col-xs-2"  *ngFor="let article of articles">
+      <ion-card class="article col-xs-2 col-lg-6"  *ngFor="let article of articles">
         <img [src]="article.image" width="150px" height="100px">
         <a [href]="article.url" class="stretched-link"></a>
         <ion-card-header>
-          <ion-card-title>{{article.name}}</ion-card-title>
-          <ion-card-subtitle>{{article.author}}</ion-card-subtitle>
+          <ion-card-title>{{ article.name }}</ion-card-title>
+          <p>{{ article.author }}</p>
+          <ion-card-subtitle>{{ article.desc }}</ion-card-subtitle>
         </ion-card-header>
 
-        <ion-card-content>
-          {{article.desc}}
-
-        </ion-card-content>
+        
       </ion-card>
 
     </ion-row>
@@ -46,6 +46,6 @@
   <hr>
   <hr>
 
-  <app-form ></app-form>
+ <app-form class="form" ></app-form>
 
 </ion-content>

@@ -1,13 +1,13 @@
-.article{
-    width:150px;
-    height:auto;
+.article {
+    width: 150px;
+    height: auto;
 }
-.stretched-link{
-    
-}
+
+.stretched-link {}
+
 ion-grid {
     --ion-grid-width: 100%;
-  
+
     --ion-grid-width-xs: 100%;
     --ion-grid-width-sm: 288px;
     --ion-grid-width-md: 384px;
@@ -15,9 +15,12 @@ ion-grid {
     --ion-grid-width-xl: 570px;
 }
 
-ion-col {
-    background-color: #135d54;
-    border: solid 1px #fff;
-    color: #fff;
-    text-align: center;
-  }
+.title{
+    font-family:'Barriecito', cursive;
+    font-size:65px;
+    margin-left:33%;
+    color:#a728a9
+    
+
+    
+}

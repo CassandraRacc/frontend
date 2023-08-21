@@ -40,7 +40,7 @@
 
 <ion-content class="form" [formGroup]="subscribeForm">
   <ion-item>
-    <ion-label>
+    <ion-label class="label">
       <h1>Subscribe</h1>
       <p>Get a weekly recap sent right to your inbox</p>
     </ion-label>
@@ -77,7 +77,8 @@
     </div>
 
   </ion-item>
-
-  <ion-button class="btn" (click)="onSubmit()" [disabled]="subscribeForm.invalid">Subscribe</ion-button>
+  <ion-item>
+    <ion-button class="btn" color="secondary" (click)="onSubmit()" [disabled]="subscribeForm.invalid">Subscribe</ion-button>
+  </ion-item>
 
 </ion-content>

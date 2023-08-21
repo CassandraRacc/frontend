@@ -14,4 +14,8 @@ export class FunFactService {
     return this.http.get<Ifact[]>('http://localhost:3000/funfacts');
   }
 
+  getLink(){
+    return this.http.get<Ifact[]>('http://localhost:3000/funfact');
+  }
+
 }
