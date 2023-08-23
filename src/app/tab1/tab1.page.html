@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true" color="primary">
 
-  <div id="carouselExampleFade"  class="carousel slide carousel-fade ">
+  <div id="carouselExampleFade"  class="carousel slide carousel-fade "  >
     <div  class="carousel-inner">
       <div class="carousel-item active">
         <img src="https://thecoconutmama.com/wp-content/uploads/2023/01/avocado-a-fruit-shutterstock_1872396403-scaled.webp" class="d-block w-100" alt="...">
@@ -28,7 +28,7 @@
   <ion-grid [fixed]="true">
     <ion-row>
 
-      <ion-card class="article col-xs-2 col-lg-6"  *ngFor="let article of articles">
+      <ion-card class="article col-xs-2 col-lg-6"  *ngFor="let article of articles | slice:-4">
         <img [src]="article.image" width="150px" height="100px">
         <a [href]="article.url" class="stretched-link"></a>
         <ion-card-header>
